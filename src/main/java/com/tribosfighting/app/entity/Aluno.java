@@ -1,0 +1,57 @@
+package com.tribosfighting.app.entity;
+
+
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "aln_aluno")
+public class Aluno {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "aln_id")
+    private Long id;
+
+    @Column(name = "aln_nome")
+    private String nome;
+
+    @Column(name = "aln_ra")
+    private Long ra;
+
+    @Column(name = "aln_data_nascimento")
+    private LocalDate dataNascimento;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getRa() {
+        return ra;
+    }
+
+    public void setRa(Long ra) {
+        this.ra = ra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+}
